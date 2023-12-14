@@ -34,3 +34,4 @@ def analyse_endpoint(analyse_input: AnalyseTexteInput):
     return {"msg": analyse_input}
 if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=8000)
+    #test
