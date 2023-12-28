@@ -3,7 +3,7 @@ from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 import nltk
-nltk.download('punkt')
+#nltk.download('punkt')
 from nltk.corpus import stopwords
 from nltk.stem import  WordNetLemmatizer
 import string
@@ -21,7 +21,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 def analyze_texte(texte :str):
     mot_cle=nltk.word_tokenize(texte)
     return {"sujet":"vide","sentiments":[],"mot_cles":mot_cle}
@@ -66,7 +65,7 @@ def QueryOpenAI(query:str):
     #declarer mon secret key
     
     # code pour faire la requette
-    openai.api_key="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"
+    openai.api_key="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"
     client = openai.ChatCompletion.create(
 
         model="gpt-3.5-turbo",
