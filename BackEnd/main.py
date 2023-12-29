@@ -65,7 +65,7 @@ def QueryOpenAI(query:str):
     #declarer mon secret key
     
     # code pour faire la requette
-    #openai.api_key="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"
+    openai.api_key="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"
     client = openai.ChatCompletion.create(
 
         model="gpt-3.5-turbo",
